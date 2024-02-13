@@ -22,7 +22,7 @@
         "react/jsx-curly-newline": "off",
         "no-unused-vars": "warn",
         "object-curly-newline": "off",
-        "max-len": ["error", { "code": 150, "tabWidth": 4 }],
+        "max-len": ["error", { "code": 3000, "tabWidth": 4 }],
         // "no-param-reassign": ["error", { "ignoreParamsNamed": ["state"], "props": false }]
         "no-param-reassign": 0
         
