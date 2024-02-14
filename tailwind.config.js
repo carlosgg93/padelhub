@@ -15,6 +15,9 @@ module.exports = {
         'primary-800': '#C6C6C6',
         'primary-900': '#EDEDED',
       },
+      spacing: {
+        42: '10.5rem',
+      },
     },
   },
   plugins: [],
