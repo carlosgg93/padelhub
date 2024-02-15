@@ -1,5 +1,5 @@
 const MenuLink = ({ label }) => (
-  <a href="/home" className="text-primary-800 hover:text-primary-400 px-3 py-2 transition-colors font-semibold" aria-label="menu item">
+  <a href="/home" className="text-primary-800 hover:text-primary-400 px-1 py-1 transition-colors text-sm font-semibold" aria-label="menu item">
     {label}
   </a>
 );

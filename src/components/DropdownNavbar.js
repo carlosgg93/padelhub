@@ -3,10 +3,13 @@ const DropDownNavBar = () => (
     <a href="/home" className="block font-semibold rounded-md px-3 py-2 bg-primary-900 hover:text-primary-400" aria-label="menu item">
       Home
     </a>
-    <a href="/home" className="block font-semibold rounded-md px-3 py-2 text-primary-800 hover:text-primary-400 hover:bg-primary-900" aria-label="menu item">
+    <a href="/tournaments" className="block font-semibold rounded-md px-3 py-2 text-primary-800 hover:text-primary-400 hover:bg-primary-900" aria-label="menu item">
+      Tournaments
+    </a>
+    <a href="/about" className="block font-semibold rounded-md px-3 py-2 text-primary-800 hover:text-primary-400 hover:bg-primary-900" aria-label="menu item">
       About
     </a>
-    <a href="/home" className="block font-semibold rounded-md px-3 py-2 text-primary-800 hover:text-primary-400 hover:bg-primary-900" aria-label="menu item">
+    <a href="/contact" className="block font-semibold rounded-md px-3 py-2 text-primary-800 hover:text-primary-400 hover:bg-primary-900" aria-label="menu item">
       Contact
     </a>
   </div>
