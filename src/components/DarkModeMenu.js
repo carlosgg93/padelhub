@@ -9,7 +9,7 @@ const DarkModeMenu = () => {
       document.body.classList.remove('dark');
       setDarkMode('false');
     }
-    document.querySelector('#dropdownDarkMode').classList.toggle('hidden');
+    ev.target.parentNode.classList.add('hidden');
   };
 
   return (
