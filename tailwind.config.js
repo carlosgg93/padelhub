@@ -19,7 +19,6 @@ module.exports = {
       spacing: {
         42: '10.5rem',
       },
-      display: ['group-hover'],
     },
   },
   plugins: [],

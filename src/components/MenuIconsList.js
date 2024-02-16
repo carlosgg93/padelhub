@@ -2,7 +2,13 @@ import DarkModeMenu from './DarkModeMenu';
 
 const MenuIconsList = () => (
   <div className="flex items-center border-l border-slate-200 ml-6 pl-6 dark:border-slate-800">
-    <button type="button" className="group" aria-label="ee">
+    <button
+      type="button"
+      aria-label="ee"
+      onClick={() => {
+        document.querySelector('#dropdownDarkMode').classList.toggle('hidden');
+      }}
+    >
       <span className="dark:hidden">
         <svg viewBox="0 0 24 24" fill="none" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-6 h-6">
           <path d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" className="stroke-slate-400 dark:stroke-slate-500" />

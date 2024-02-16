@@ -1,16 +1,6 @@
-import React, { useEffect } from 'react';
-import { getDarkMode, setDarkMode } from '../utils/localStorage';
+import { setDarkMode } from '../utils/localStorage';
 
 const DarkModeMenu = () => {
-  useEffect(() => {
-    const darkMode = getDarkMode();
-    if (darkMode === 'true' && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-      document.body.classList.add('dark');
-    } else {
-      document.body.classList.remove('dark');
-    }
-  }, []);
-
   const handleChangeDarkMode = (ev, mode) => {
     if (mode === 'dark') {
       document.body.classList.add('dark');
@@ -19,10 +9,11 @@ const DarkModeMenu = () => {
       document.body.classList.remove('dark');
       setDarkMode('false');
     }
+    document.querySelector('#dropdownDarkMode').classList.toggle('hidden');
   };
 
   return (
-    <ul className="group-hover:block absolute z-50 top-full right-0 bg-white rounded-lg ring-1 ring-slate-900/10 shadow-lg overflow-hidden w-36 py-1 text-sm text-slate-700 font-semibold dark:bg-slate-800 dark:ring-0 dark:highlight-white/5 dark:text-slate-300 mt-8" aria-labelledby="headlessui-listbox-label-:Rpkcr6:" aria-orientation="vertical" id="headlessui-listbox-options-:R1pkcr6:" role="listbox" tabIndex="0" data-headlessui-state="open">
+    <ul id="dropdownDarkMode" className="hidden absolute z-50 top-full right-0 bg-white rounded-lg ring-1 ring-slate-900/10 shadow-lg overflow-hidden w-36 py-1 text-sm text-slate-700 font-semibold dark:bg-slate-800 dark:ring-0 dark:highlight-white/5 dark:text-slate-300 mt-8">
       <li className="py-1 px-2 flex items-center cursor-pointer hover:bg-slate-200 dark:hover:bg-slate-700" onClick={(ev) => handleChangeDarkMode(ev, 'light')}>
         <svg viewBox="0 0 24 24" fill="none" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-6 h-6 mr-2">
           <path d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" className="stroke-slate-400 dark:stroke-slate-500" />
