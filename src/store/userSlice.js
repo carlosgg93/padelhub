@@ -10,21 +10,13 @@ const initialState = {
   error: '',
 };
 
-const loginUserAsync = createAsyncThunk('user/login', async (user, { rejectWithValue }) => {
-  try {
-    if (getUser() !== null) {
-      return getUser();
-    }
-
-    const response = await loginUser(user);
-    const data = await response.json();
-    if (response.ok) {
-      return data;
-    }
-    return rejectWithValue(data);
-  } catch (error) {
-    return rejectWithValue(error);
+export const loginUserAsync = createAsyncThunk('user/login', async (user, { rejectWithValue }) => {
+  if (getUser() !== null) {
+    return getUser();
   }
+
+  const response = await loginUser(user);
+  return response;
 });
 
 export const logOutUserAsync = createAsyncThunk('user/logout', async () => {

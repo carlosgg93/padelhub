@@ -7,5 +7,5 @@ export const DARKMODE_KEY = 'darkmode';
 export const TIMEOUT_MIN = 1;
 export const TIMEOUT_REQUEST = 1000 * 60 * TIMEOUT_MIN;
 
-export const BASE_URL = 'http://localhost:3001';
+export const BASE_URL = 'http://localhost:3000';
 export const API_URL = '/api';
