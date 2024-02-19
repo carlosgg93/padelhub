@@ -1,7 +1,6 @@
 const LoginForm = () => (
   <div className="w-full max-w-xs mx-auto">
-    <form className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
-
+    <form id="loginForm" className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
       <div className="mb-4">
         <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="username">
           Username
@@ -33,7 +32,6 @@ const LoginForm = () => (
           Forgot Password?
         </a>
       </div>
-
     </form>
     <p className="text-center text-gray-500 text-xs">&copy;2020 Acme Corp. All rights reserved.</p>
   </div>

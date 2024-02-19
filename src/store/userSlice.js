@@ -85,7 +85,7 @@ const userSlice = createSlice({
       .addCase(logOutUserAsync.pending, (state) => {
         state.loading = true;
       })
-      .addCase(logOutUserAsync.fulfilled, (state, action) => {
+      .addCase(logOutUserAsync.fulfilled, (state) => {
         state.loading = false;
         state.isLogged = false;
         removeToken();

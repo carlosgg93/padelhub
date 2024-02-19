@@ -1,5 +1,3 @@
-import logo from '../logo.svg';
-
 const Logo = () => (
   <a className="mr-3 flex-none w-[2.0625rem] overflow-hidden md:w-auto" href="/">
     <span className="sr-only">Tailwind CSS home page</span>
