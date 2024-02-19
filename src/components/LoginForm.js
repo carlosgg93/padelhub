@@ -15,9 +15,9 @@ const LoginForm = () => {
 
   return (
     <div className="w-full max-w-xs mx-auto">
-      <form id="loginForm" className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
+      <form id="loginForm" className="bg-primary-900 dark:bg-slate-800 shadow-md rounded px-8 pt-6 pb-8 mb-4 overflow-hidden">
         <div className="mb-4">
-          <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="email">
+          <label className="block text-primary-500 dark:text-slate-300 text-sm font-bold mb-2" htmlFor="email">
             Email
           </label>
           <input
@@ -33,11 +33,11 @@ const LoginForm = () => {
         </div>
 
         <div className="mb-6">
-          <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="password">
+          <label className="block text-primary-500 dark:text-slate-300 text-sm font-bold mb-2" htmlFor="password">
             Password
           </label>
           <input
-            className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
+            className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline invalid:focus:ring-red-400 peer"
             id="password"
             type="password"
             placeholder="******************"
@@ -45,7 +45,7 @@ const LoginForm = () => {
               setPassword(document.getElementById('password').value);
             }}
           />
-          <p className="text-red-500 text-xs italic">Please choose a password.</p>
+          <p className="hidden text-red-500 text-xs italic peer-required:block">Please choose a password.</p>
         </div>
 
         <div className="flex items-center justify-between">

@@ -7,7 +7,6 @@ import Body from './components/Body';
 import Footer from './components/Footer';
 import { isLogged } from './utils/localStorage';
 import { setUserAsync } from './store/userSlice';
-import LoginForm from './components/LoginForm';
 import useDarkMode from './hooks/useDarkMode';
 
 function App() {
@@ -32,8 +31,6 @@ function App() {
       if (logged) {
         dispatch(setUserAsync(logged));
         navigation('/');
-      } else {
-        navigation('/login');
       }
     } else {
       navigation(location.pathname === '/login' ? '/' : location.pathname);
@@ -43,7 +40,7 @@ function App() {
   return (
     <>
       <Header />
-      {isAuthenticated ? <Body /> : <LoginForm />}
+      <Body />
       <Footer />
     </>
   );
