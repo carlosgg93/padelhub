@@ -1,6 +1,8 @@
 /** @type {import('tailwindcss').Config} */
-module.exports = {
-  content: ['./src/**/*.{html,js,ts,jsx,tsx}', './src/**/*.{html,js,ts,jsx,tsx}'],
+import keepPreset from 'keep-react/preset';
+
+export default {
+  content: ['./src/**/*.{html,js,ts,jsx,tsx}', './src/**/*.{html,js,ts,jsx,tsx}', './public/index.html', 'node_modules/keep-react/**/*.{html,js,ts,jsx,tsx}'],
   mode: 'jit',
   darkMode: 'class', // or 'media' or 'class'
   theme: {
@@ -22,5 +24,6 @@ module.exports = {
       },
     },
   },
+  presets: [keepPreset],
   plugins: [],
 };

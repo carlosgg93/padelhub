@@ -6,11 +6,12 @@ import registerUser from '../services/register';
 const initialState = {
   loading: false,
   isLogged: false,
+  user: null,
   response: null,
   error: '',
 };
 
-export const loginUserAsync = createAsyncThunk('user/login', async (user, { rejectWithValue }) => {
+export const loginUserAsync = createAsyncThunk('user/login', async (user) => {
   if (getUser() !== null) {
     return getUser();
   }
@@ -42,6 +43,7 @@ const userSlice = createSlice({
       .addCase(loginUserAsync.fulfilled, (state, action) => {
         state.loading = false;
         state.isLogged = true;
+        state.user = action.payload;
         setToken(action.payload.token);
         setUSer(action.payload);
       })
@@ -49,6 +51,7 @@ const userSlice = createSlice({
         state.loading = false;
         state.error = action.error.message;
         state.isLogged = false;
+        state.user = null;
       })
       .addCase(setUserAsync.pending, (state) => {
         state.loading = true;
@@ -56,11 +59,13 @@ const userSlice = createSlice({
       .addCase(setUserAsync.fulfilled, (state, action) => {
         state.loading = false;
         state.isLogged = true;
+        state.user = action.payload;
         setToken(action.payload.token);
         setUSer(action.payload);
       })
       .addCase(setUserAsync.rejected, (state, action) => {
         state.loading = false;
+        state.user = null;
         state.error = action.error.message;
       })
       .addCase(registerUserAsync.pending, (state) => {

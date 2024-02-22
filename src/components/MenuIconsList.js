@@ -7,12 +7,13 @@ const MenuIconsList = () => {
   const navigation = useNavigate();
   const location = useLocation();
   const isAuthenticated = useSelector((state) => state.user.isLogged);
+  const user = useSelector((state) => state.user.user);
 
   return (
     <div className="flex items-center border-l border-slate-200 ml-6 pl-6 dark:border-slate-800">
       <DarkModeMenu />
 
-      {isAuthenticated && <UserMenu />}
+      {isAuthenticated && user && <UserMenu user={user} />}
 
       {!isAuthenticated && (
         <span className="rounded-md shadow-sm">
