@@ -13,7 +13,7 @@ const Header = () => {
   };
 
   return (
-    <header className="sticky top-0 w-full bg-primary-0 px-20 py-1 shadow">
+    <header className="sticky top-0 w-full backdrop-blur bg-primary-0 px-20 py-1 shadow">
       <div className="sticky top-0 z-40 w-full bg-primary-0 py-1 lg:z-50 lg:border-b lg:border-slate-900/10 dark:border-slate-50/[0.06]supports-backdrop-blur:bg-white/60 dark:bg-transparent">
         <div className="max-w-8xl mx-auto">
           <div className="py-4 mx-4 lg:mx-0">
